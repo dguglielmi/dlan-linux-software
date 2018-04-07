@@ -182,9 +182,9 @@ namespace HomePlugMMEs
     class __packed__ Destination
     {
       DstData data;
-      Destination(const DstData& d) : data(d) {}
       friend class std::list<Destination>;
     public:
+      Destination(const DstData& d) : data(d) {}
       CMACAddress GetAddress() const { return (CMACAddress(data.cAddr) & ~CMACAddress(0x01)); }
       bool IsToneMapValid() const { return ((CMACAddress(data.cAddr) & CMACAddress(0x01)) == CMACAddress::Null()); }
       double GetTxRate() const { return (dConstantM * (((double)letohs(data.uBytes40)) / 42.0)) + dConstantB; }
@@ -329,9 +329,9 @@ namespace HomePlugMMEs
     class __packed__ TxCap
     {
       TxcData data;
-      TxCap(const TxcData& d) : data(d) {}
       friend class std::list<TxCap>;
     public:
+      TxCap(const TxcData& d) : data(d) {}
       CMACAddress GetAddress() const { return CMACAddress(data.cAddr); }
       double GetTxRate() const { return RateFromBPBlk((data.cBytesPer336usBlock[0] << 8) + data.cBytesPer336usBlock[1]); }
     };
@@ -339,9 +339,9 @@ namespace HomePlugMMEs
     class __packed__ RxCap
     {
       RxcData data;
-      RxCap(const RxcData& d) : data(d) {}
       friend class std::list<RxCap>;
     public:
+      RxCap(const RxcData& d) : data(d) {}
       CMACAddress GetAddress() const { return CMACAddress(data.cAddr); }
       double GetRxRate() const { return RateFromBPBlk((data.cBytesPer336usBlock[0] << 8) + data.cBytesPer336usBlock[1]); }
     };
@@ -641,12 +641,12 @@ namespace HomePlugAvMMEs
       CMACAddress addr, firstBridgedAddr;
       uint32_t uAvgTxPhyRateMbps, uAvgRxPhyRateMbps;
       friend class std::list<StationInfo>;
+    public:
       template<class TStaData>
       StationInfo(const TStaData& d) :
         addr(d.cAddr), firstBridgedAddr(d.cFirstBridgedAddr),
         uAvgTxPhyRateMbps(letohx(d.uAvgTxPhyRateMbps)), 
         uAvgRxPhyRateMbps(letohx(d.uAvgRxPhyRateMbps)) {}
-    public:    
       const CMACAddress& GetAddress() const { return addr; }
       const CMACAddress& GetFirstBridgedAddress() const { return firstBridgedAddr; }
       uint32_t GetTxCodedRate() const { return uAvgTxPhyRateMbps; }
