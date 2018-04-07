@@ -1,5 +1,5 @@
-**I'm not the original author of the software and the license of this code is unknown yet**
-**This is just my personal work to make the software run on modern Linux distros**
+**I'm not the original author of the software and the license of this code is unknown yet.
+This is just my personal work to make the software run on modern Linux distros**
 
 ------------------------------------------------------
 
