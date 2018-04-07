@@ -2,8 +2,8 @@
 #ifndef _DLAN_PLATFORM_H_
 #define _DLAN_PLATFORM_H_
 
-#include <stdio.h>
-#include <stdarg.h>
+#include <cstdio>
+#include <cstdarg>
 
 #define __packing_begin__
 #define __packing_end__

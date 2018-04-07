@@ -10,9 +10,8 @@
 #include <iterator>
 #include <string>
 #include <vector>
-#include <memory.h>
-#include <string.h>
-#include <stdint.h>
+#include <cstring>
+#include <cstdint>
 #include "platform.h"
 #include "macheader.h"
 #include "packet.h"

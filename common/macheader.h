@@ -6,7 +6,7 @@
 #ifndef _DLAN_MACHEADER_H_
 #define _DLAN_MACHEADER_H_
 
-#include <string.h>
+#include <cstring>
 #include "platform.h"
 #include "packet.h"
 #include "macaddress.h"

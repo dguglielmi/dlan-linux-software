@@ -3,9 +3,8 @@
 // (c) 2006-2010 devolo AG, Aachen (Germany)
 //
 
-#include <ctype.h>
-#include <stdint.h>
-#include <string.h>
+#include <cstdint>
+#include <cstring>
 #include <string>
 #include <algorithm>
 #include <functional>

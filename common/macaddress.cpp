@@ -6,7 +6,7 @@
 #include <iomanip>
 #include <sstream>
 #include <sstream>
-#include <stdlib.h>
+#include <cstdlib>
 #include "macaddress.h"
 
 static const char* pHexDigits = "0123456789ABCDEFabcdef"; 

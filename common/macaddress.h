@@ -7,7 +7,7 @@
 #define _DLAN_MACADDRESS_H_
 
 #include <string>
-#include <string.h>
+#include <cstring>
 
 class CMACAddress
 {

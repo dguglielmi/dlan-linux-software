@@ -16,10 +16,10 @@
 #include <unistd.h>
 #include <linux/types.h>
 #include <linux/filter.h>
-#include <errno.h>
+#include <cerrno>
 #include <sys/time.h>
-#include <time.h>
-#include <string.h>
+#include <ctime>
+#include <cstring>
 
 #include "macheader.h"
 #include "packet.h"
