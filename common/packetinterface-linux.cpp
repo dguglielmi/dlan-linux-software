@@ -295,7 +295,7 @@ bool CPacketInterfaceLinux::InterfaceIsActive(const char* name, bool forceActiva
     if(sock >= 0)
     {
       struct ifreq ifreq;
-      memset(&ifreq, 0,sizeof(struct ifreq));
+      memset(&ifreq, 0, sizeof(struct ifreq));
       strncpy(ifreq.ifr_name, name, sizeof(ifreq.ifr_name) - 1);
       if (ioctl(sock, SIOCGIFFLAGS, &ifreq) == 0)
       {
