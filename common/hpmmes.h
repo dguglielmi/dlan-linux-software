@@ -30,10 +30,6 @@ namespace
 
   uint8_t letohx(uint8_t i) { return i; }
   uint16_t letohx(uint16_t i) { return letohs(i); }
-  uint32_t letohx(uint32_t i) { return letohl(i); }
-  uint8_t htolex(uint8_t i) { return i; }
-  uint16_t htolex(uint16_t i) { return htoles(i); }
-  uint32_t htolex(uint32_t i) { return htolel(i); }
 }
 
 namespace HomePlugMMEs
