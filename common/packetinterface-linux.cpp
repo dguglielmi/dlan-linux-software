@@ -295,7 +295,7 @@ bool CPacketInterfaceLinux::InterfaceIsActive(const char* name, bool forceActiva
     if(sock >= 0)
     {
       struct ifreq ifreq;
-      memset(&ifreq, sizeof(struct ifreq), 0);
+      memset(&ifreq, 0,sizeof(struct ifreq));
       strncpy(ifreq.ifr_name, name, sizeof(ifreq.ifr_name) - 1);
       if (ioctl(sock, SIOCGIFFLAGS, &ifreq) == 0)
       {
@@ -325,7 +325,7 @@ bool CPacketInterfaceLinux::GetCMACAddress(const char* name, CMACAddress& mac) c
     if(sock >= 0)
     {
       struct ifreq ifreq;
-      memset(&ifreq, sizeof(struct ifreq), 0);
+      memset(&ifreq, 0, sizeof(struct ifreq));
       strncpy(ifreq.ifr_name, name, IF_NAMESIZE);
       if(ioctl(sock, SIOCGIFHWADDR, &ifreq) >= 0)
       {
@@ -357,7 +357,7 @@ bool CPacketInterfaceLinux::GetInterfaceIndex(const char* name, int& ifindex) co
     if(sock >= 0)
     {
       struct ifreq ifreq;
-      memset(&ifreq, sizeof(struct ifreq), 0);
+      memset(&ifreq, 0, sizeof(struct ifreq));
       strncpy(ifreq.ifr_name, name, IF_NAMESIZE);
       if(ioctl(sock, SIOCGIFINDEX, &ifreq) == 0)
       {
