@@ -20,7 +20,7 @@ struct CFindLocalDevice : public IDlanMonitorObserver, public CDlanMonitor
   CDlanLocalDeviceList::const_iterator itDevice;
 
   CFindLocalDevice(IPacketInterface& i, CMACAddress& d) : 
-    stop(false), ifc(i), devToFind(d), itDevice(GetLocalDevices().end()), CDlanMonitor(i, *this) {}
+    CDlanMonitor(i, *this), stop(false), ifc(i), devToFind(d), itDevice(GetLocalDevices().end()) {}
 
   virtual void OnUpdate()
   {
