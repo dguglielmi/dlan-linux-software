@@ -79,8 +79,7 @@ int main(int argc, char** argv)
               itRemote->GetAddress().ToString().c_str(), 
               itRemote->GetTxRate(),
               itRemote->GetRxRate(),
-              itRemote->GetVersion().c_str(),
-              VersionProductString(*itRemote).c_str());
+              itRemote->GetVersion().c_str());
           }
           else
           {
