@@ -177,7 +177,6 @@ namespace HomePlugMMEs
     class __packed__ Destination
     {
       DstData data;
-      friend class std::list<Destination>;
     public:
       Destination(const DstData& d) : data(d) {}
       CMACAddress GetAddress() const { return (CMACAddress(data.cAddr) & ~CMACAddress(0x01)); }
@@ -324,7 +323,6 @@ namespace HomePlugMMEs
     class __packed__ TxCap
     {
       TxcData data;
-      friend class std::list<TxCap>;
     public:
       TxCap(const TxcData& d) : data(d) {}
       CMACAddress GetAddress() const { return CMACAddress(data.cAddr); }
@@ -334,7 +332,6 @@ namespace HomePlugMMEs
     class __packed__ RxCap
     {
       RxcData data;
-      friend class std::list<RxCap>;
     public:
       RxCap(const RxcData& d) : data(d) {}
       CMACAddress GetAddress() const { return CMACAddress(data.cAddr); }
@@ -635,7 +632,6 @@ namespace HomePlugAvMMEs
     {
       CMACAddress addr, firstBridgedAddr;
       uint32_t uAvgTxPhyRateMbps, uAvgRxPhyRateMbps;
-      friend class std::list<StationInfo>;
     public:
       template<class TStaData>
       StationInfo(const TStaData& d) :
