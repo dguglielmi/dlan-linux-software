@@ -3,7 +3,7 @@
 // (c) 2009 devolo AG, Aachen (Germany)
 //
 
-#include <stdio.h>
+#include <cstdio>
 #include <fstream>
 #include <sstream>
 #include <string>

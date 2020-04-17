@@ -3,7 +3,7 @@
 // (c) 2008-2009 devolo AG, Aachen (Germany)
 //
 
-#include <stdio.h>
+#include <cstdio>
 #include "../common/mscounter.h"
 #include "../common/dlanmonitor.h"
 #include "../common/packetinterface-linux.h"
