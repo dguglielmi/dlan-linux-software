@@ -55,7 +55,7 @@ int main(int argc, char** argv)
   CPacketInterfaceLinux pktIfc(setIfcNames);
   CDlanMonitor m(pktIfc);
   CPacketTaskRunner(pktIfc, m).Run(1000, MSCounter());
- 
+
   if(m.GetLocalDevices().empty())
   {
     printf("no devices found\n");
