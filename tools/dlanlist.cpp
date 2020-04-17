@@ -52,15 +52,15 @@ int main(int argc, char** argv)
     return result;
   }
 
- CPacketInterfaceLinux pktIfc(setIfcNames);
- CDlanMonitor m(pktIfc);
- CPacketTaskRunner(pktIfc, m).Run(1000, MSCounter());
-
- if(m.GetLocalDevices().empty())
- {
-   printf("no devices found\n");
-   return 1;
- }
+  CPacketInterfaceLinux pktIfc(setIfcNames);
+  CDlanMonitor m(pktIfc);
+  CPacketTaskRunner(pktIfc, m).Run(1000, MSCounter());
+ 
+  if(m.GetLocalDevices().empty())
+  {
+    printf("no devices found\n");
+    return 1;
+  }
 
   printf("Type    MAC address        Mbps TX/RX       Version/Product\n");
   for(CDlanLocalDeviceList::const_iterator itLocal = m.GetLocalDevices().begin();
